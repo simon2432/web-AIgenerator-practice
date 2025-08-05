@@ -1,6 +1,6 @@
 # INKIA – AI Image Generator Mockup
 
-<img width="1024" height="1024" alt="ChatGPT Image 4 jun 2025, 06_45_54 p m" src="https://github.com/user-attachments/assets/19c51aba-8e94-46e8-bc12-c5a843451af9" />
+<img width="500" height="500" alt="ChatGPT Image 4 jun 2025, 06_45_54 p m" src="https://github.com/user-attachments/assets/19c51aba-8e94-46e8-bc12-c5a843451af9" />
 
 This is a **frontend mockup of an AI image generation app**, built entirely with **HTML and CSS**.
 
