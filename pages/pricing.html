@@ -11,6 +11,8 @@
       rel="stylesheet"
     />
   </head>
+
+
   <body>
     <header class="header">
       <div class="logo-container">
@@ -28,16 +30,105 @@
         <a href="generator">GENERATOR</a>
       </nav>
     </header>
+
+
     <main class="main-pricing">
       <h1>PRICING</h1>
-      <dev>
+      <div class="introduction">
         <h2>
           Choose the plan that fits your creativity
-          <br />From casual creators to professional designers, we have the
-          right plan for you.
+          <br /><br /><mark >casual creators to professional designers, we have the
+          right plan for you</mark> 
         </h2>
-      </dev>
+      </div>
+
+       <div class="pricing-cards">
+
+        <div class="p-card">
+          <h3>FREE PLAN</h3>
+          <p class="price">$0/month</p>
+          <ul>
+            <li>Basic image generation</li>
+            <li>Limited styles and resolutions</li>
+            <li>Watermarked images</li>
+            <li>Community support</li>
+          </ul>
+          <button class="select-button">Select Plan</button>
+        </div>
+
+        <div class="p-card">
+          <h3>PRO PLAN</h3>
+          <p class="price">$9.99/month</p>
+          <ul>
+            <li>Unlimited image generation</li>
+            <li>Access to all styles and resolutions</li>
+            <li>No watermarks on images</li>
+            <li>Priority email support</li>
+          </ul>
+          <button class="select-button">Select Plan</button>
+        </div>
+
+        <div class="p-card">
+          <h3>ENTERPRISE PLAN</h3>
+          <p class="price">Contact us for pricing</p>
+          <ul>
+            <li>Custom solutions for businesses</li>
+            <li>Dedicated account manager</li>
+            <li>API access and integration support</li>
+            <li>24/7 premium support</li>
+          </ul>
+          <button class="select-button">Contact Us</button>
+        </div>
+
+       </div>
+
+       <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+      
+        <!-- Radio "none" para poder cerrar todos -->
+        <input type="radio" name="faq" id="faq-none" checked hidden>
+      
+        <div class="faq-item">
+          <input type="radio" name="faq" id="faq1" hidden>
+          <label class="faq-q" for="faq1">Can I change my plan later?</label>
+          <div class="faq-a">
+            <p>Yes. You can upgrade or downgrade your plan at any time from your account settings. Changes are applied instantly.</p>
+            <label class="faq-close" for="faq-none" aria-label="Close">×</label>
+          </div>
+        </div>
+      
+        <div class="faq-item">
+          <input type="radio" name="faq" id="faq2" hidden>
+          <label class="faq-q" for="faq2">What happens if I exceed my plan limit?</label>
+          <div class="faq-a">
+            <p>If you exceed your monthly generation limit, you can purchase extra credits or wait until the next billing cycle to reset.</p>
+            <label class="faq-close" for="faq-none" aria-label="Close">×</label>
+          </div>
+        </div>
+      
+        <div class="faq-item">
+          <input type="radio" name="faq" id="faq3" hidden>
+          <label class="faq-q" for="faq3">Can I use AI-generated images commercially?</label>
+          <div class="faq-a">
+            <p>Yes. All images generated with INKIA can be used commercially, provided they comply with our terms of service.</p>
+            <label class="faq-close" for="faq-none" aria-label="Close">×</label>
+          </div>
+        </div>
+      
+        <div class="faq-item">
+          <input type="radio" name="faq" id="faq4" hidden>
+          <label class="faq-q" for="faq4">Do you offer refunds?</label>
+          <div class="faq-a">
+            <p>Refunds are available within 7 days of purchase if you haven't used more than 10% of your plan's credits.</p>
+            <label class="faq-close" for="faq-none" aria-label="Close">×</label>
+          </div>
+        </div>
+       </section>
+       
     </main>
+
+
+
     <footer>
       <div class="footer-container">
         <div class="logo-container">

@@ -1,9 +1,192 @@
+.main-pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
 .main-pricing h1 {
-  text-align: center;
-  margin: 15vh;
+  margin-bottom: 8vh;
+  margin-top: 5vh;
 }
 
 .main-pricing h2 {
   text-align: center;
+  color: #b27ae7;
   margin-bottom: 5vh;
+}
+
+.introduction {
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  box-sizing: border-box;
+  border-radius: 30px;
+  padding: 2rem;
+}
+
+.introduction mark {
+  border-radius: 8px;
+  padding: 0.2rem;
+}
+
+.pricing-cards {
+  background: linear-gradient(135deg, #ff00cc, #333399);
+  background-size: 400% 400%;
+  animation: moverFondo 10s ease infinite;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 10vh;
+  width: 30vw;
+  border-radius: 30px;
+  height: auto;
+  padding: 5vh;
+}
+
+@keyframes moverFondo {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.p-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 300px;
+  text-align: center;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(15px); /* Desenfoque del fondo */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  border: 0.5px solid #fff;
+}
+
+.p-card h3 {
+  margin-bottom: 1rem;
+}
+
+.select-button {
+  color: #fff;
+  background-color: #b27ae7;
+  border-radius: 10px;
+  padding: 0.3rem;
+  margin-top: 0.5rem;
+}
+
+.p-card h3 {
+  background-color: #3c0173;
+  border-radius: 10px;
+}
+
+.faq {
+  max-width: 800px;
+  margin-bottom: 10vh;
+}
+.faq h2 {
+  text-align: center;
+  color: #c093e5;
+  margin-bottom: 2vh;
+}
+
+.faq-item {
+  border: 1px solid rgba(178, 122, 231, 0.6);
+  border-radius: 16px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.faq-q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  cursor: pointer;
+  font-family: "Orbitron", sans-serif;
+  color: #111;
+  position: relative;
+}
+.faq-q::after {
+  content: "+";
+  font-size: 18px;
+  transition: transform 0.3s ease;
+  color: #111;
+}
+
+.faq p {
+  font-family: sans-serif;
+}
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 18px;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: max-height 0.35s ease, opacity 0.3s ease, transform 0.3s ease,
+    padding 0.3s ease;
+  color: #666;
+  line-height: 1.6;
+  position: relative;
+}
+.faq-close {
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #111;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.faq-close:hover {
+  opacity: 1;
+}
+
+/* Estado abierto (cuando el radio está checked) */
+.faq-item > input:checked + .faq-q::after {
+  transform: rotate(45deg);
+}
+.faq-item > input:checked ~ .faq-a {
+  max-height: 220px; /* subí si necesitás más */
+  padding: 6px 18px 16px;
+  opacity: 1;
+  transform: translateY(0);
+}
+.faq-item > input:checked ~ .faq-a p {
+  margin-right: 28px;
+}
+
+.faq-item > input:checked ~ .faq-a,
+.faq-item > input:checked ~ .faq-q {
+  border-color: #b27ae7;
+}
+.faq-item:has(> input:checked) {
+  /* si tu navegador soporta :has */
+  box-shadow: 0 0 18px rgba(178, 122, 231, 0.25);
+}
+
+@media (max-width: 900px) {
+  .pricing-cards {
+    width: 100vw;
+    border-radius: 0;
+    padding: 2vh 0.5rem;
+    min-width: unset;
+    max-width: unset;
+  }
 }
